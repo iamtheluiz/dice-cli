@@ -1,0 +1,26 @@
+{
+  "name": "dice-cli",
+  "version": "0.1.0",
+  "keywords": [
+    "dice",
+    "cli"
+  ],
+  "main": "./dist/index.js",
+  "description": "Roll a dice using a command line",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node ./src/index.ts",
+    "start-dist": "node ./dist/index.ts"
+  },
+  "author": "iamtheluiz <iamtheluiz.dev@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamtheluiz/dice-cli.git"
+  },
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
+  }
+}
