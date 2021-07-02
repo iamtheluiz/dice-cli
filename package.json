@@ -1,16 +1,20 @@
 {
-  "name": "dice-cli",
+  "name": "dice-roll",
   "version": "0.1.0",
   "keywords": [
     "dice",
-    "cli"
+    "roll",
+    "api",
+    ""
   ],
   "main": "./dist/index.js",
-  "description": "Roll a dice using a command line",
+  "description": "Roll dices in a virtual room",
   "scripts": {
     "build": "tsc",
     "start": "ts-node ./src/index.ts",
-    "start-dist": "node ./dist/index.ts"
+    "start-dist": "node ./dist/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx"
   },
   "author": "iamtheluiz <iamtheluiz.dev@gmail.com>",
   "repository": {
@@ -20,7 +24,14 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "prettier": "^2.3.2",
     "ts-node": "^10.0.0",
+    "ts-node-dev": "^1.1.8",
     "typescript": "^4.3.5"
   }
 }
