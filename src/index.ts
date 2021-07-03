@@ -1,8 +1,7 @@
-class Program {
-  static run(): void {
-    console.log('Hello');
-    console.log('What do you want?');
-  }
-}
+import app from './app';
 
-Program.run();
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
+});

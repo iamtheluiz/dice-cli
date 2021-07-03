@@ -2,8 +2,9 @@
   "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "target": "es2017"
+    "target": "es2017",
+    "moduleResolution": "node"
   },
   "typeAcquisition": { "include": ["jest"] },
-  "exclude": ["**/**.d.ts", "**/**.test.ts", "./jest.config.ts"]
+  "exclude": ["**/**.d.ts", "**/**.test.ts", "jest.config.ts"]
 }
