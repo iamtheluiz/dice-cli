@@ -1,20 +1,7 @@
-import express from 'express';
+import app from './app';
 
-const app = express();
-const routes = express.Router();
-const port = 3000;
-
-routes.get('/', (request, response) => {
-  const info = {
-    name: 'Dice Roll API',
-    repository: 'https://github.com/iamtheluiz/dice-roll',
-  };
-
-  return response.json(info).status(200);
-});
-
-app.use(routes);
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-  console.log('Server running at http://localhost:3000/');
+  console.log(`Server running at http://localhost:${port}/`);
 });
