@@ -5,7 +5,8 @@ import RollController from './controllers/RollController';
 
 const routes = express.Router();
 
-routes.get('/', (request, response) => {
+// API Routes
+routes.get('/api', (request, response) => {
   const info = {
     name: 'Dice Roll API',
     repository: 'https://github.com/iamtheluiz/dice-roll',
@@ -14,6 +15,6 @@ routes.get('/', (request, response) => {
   return response.json(info).status(200);
 });
 
-routes.post('/roll', RollController.roll);
+routes.post('/api/roll', RollController.roll);
 
 export default routes;
