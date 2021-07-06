@@ -1,0 +1,37 @@
+.logo-container {
+  --logo-size: 33px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  color: #fefefe;
+}
+.logo-container span {
+  margin-left: calc(var(--logo-size) / 4);
+  font-weight: 500;
+  font-size: calc(var(--logo-size) / 2);
+}
+.logo-container .logo {
+  --border-size: calc(var(--logo-size) / 16.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--logo-size);
+  height: var(--logo-size);
+
+  border: var(--border-size) solid white;
+  border-radius: calc(var(--logo-size) / 5.5);
+}
+.logo-container .logo .dot {
+  --dot-size: calc(var(--logo-size) / 4);
+
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: var(--dot-size);
+
+  background-color: white;
+}

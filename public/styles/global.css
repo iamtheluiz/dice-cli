@@ -1,0 +1,41 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+html,
+body,
+textarea,
+input,
+button {
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+.button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #fefefe;
+
+  color: #2e2e2e;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+.button:hover {
+  filter: brightness(0.8);
+}
