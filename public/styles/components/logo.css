@@ -1,12 +1,13 @@
 .logo-container {
   --logo-size: 33px;
+  --color: #fefefe;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   text-decoration: none;
-  color: #fefefe;
+  color: var(--color);
 }
 .logo-container span {
   margin-left: calc(var(--logo-size) / 4);
@@ -23,7 +24,7 @@
   width: var(--logo-size);
   height: var(--logo-size);
 
-  border: var(--border-size) solid white;
+  border: var(--border-size) solid var(--color);
   border-radius: calc(var(--logo-size) / 5.5);
 }
 .logo-container .logo .dot {
@@ -33,5 +34,5 @@
   height: var(--dot-size);
   border-radius: var(--dot-size);
 
-  background-color: white;
+  background-color: var(--color);
 }
