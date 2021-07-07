@@ -17,6 +17,8 @@ app.engine(
   expressHandlebars({
     defaultLayout: 'template',
     extname: '.hbs',
+    partialsDir: path.join(__dirname, 'views', 'components'),
+    layoutsDir: path.join(__dirname, 'views', 'layouts'),
   }),
 );
 app.set('view engine', 'hbs');

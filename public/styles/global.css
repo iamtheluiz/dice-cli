@@ -27,6 +27,7 @@ a {
   padding: 8px 16px;
   border-radius: 4px;
   background-color: #fefefe;
+  border: 2px solid #fefefe;
 
   color: #2e2e2e;
   font-size: 14px;
@@ -38,4 +39,62 @@ a {
 }
 .button:hover {
   filter: brightness(0.8);
+}
+.button.outlined {
+  background-color: transparent;
+  color: #fefefe;
+}
+
+section#banner {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #171717;
+}
+div.content {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+div.content > div.left,
+div.content > div.right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+div.content div.left {
+  padding: 0px 32px 0px 0px;
+}
+div.content div.right {
+  padding: 0px 0px 0px 32px;
+}
+section#banner div.content > div.left {
+  display: flex;
+  color: #fefefe;
+  flex: 0.8;
+  padding: 0px 32px 0px 0px;
+}
+section#banner div.content > div.left h1 {
+  font-size: 48px;
+}
+section#banner div.content > div.left p {
+  font-size: 16px;
+  margin-top: 16px;
+}
+section#banner div.content > div.left .buttons {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+}
+
+/* 3D Die Animation */
+section#banner div.content > div.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
