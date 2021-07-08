@@ -16,6 +16,7 @@ button {
 html,
 body {
   background-color: #171717;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
@@ -117,8 +118,65 @@ section#banner div.content > div.right {
   }
 }
 
+section#rooms-actions {
+  display: flex;
+  flex-direction: row;
+  height: 320px;
+}
+section#rooms-actions div.left,
+section#rooms-actions div.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  height: 100%;
+  border-radius: 16px;
+}
+section#rooms-actions div.left {
+  background-color: #fefefe;
+  margin-right: 8px;
+}
+section#rooms-actions div.left .logo-container {
+  --color: #2e2e2e;
+}
+section#rooms-actions div.left .logo-container,
+section#rooms-actions div.right .logo-container {
+  --logo-size: 48px;
+}
+section#rooms-actions div.right {
+  border: 3px dashed #fefefe;
+  margin-left: 8px;
+}
+section#rooms-actions div.left strong,
+section#rooms-actions div.left input {
+  color: #2e2e2e;
+}
+section#rooms-actions div.right strong,
+section#rooms-actions div.right input {
+  color: #fefefe;
+}
+section#rooms-actions button,
+section#rooms-actions input {
+  width: 240px;
+  border-radius: 8px;
+}
+section#rooms-actions input {
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  background-color: #333333;
+}
+section#rooms-actions div.left input {
+  background-color: #fefefe;
+  border: 2px solid #333333;
+}
+section#rooms-actions button {
+  font-size: 14px;
+}
+
 section#rooms {
-  border-radius: 30px 30px 0px 0px;
+  border-radius: 30px 30px 6px 6px;
   background-color: #fefefe;
   padding: 32px;
 }

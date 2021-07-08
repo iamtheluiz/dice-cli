@@ -5,7 +5,7 @@
       <h1>Boas vindas ao <br> Dice Roll!</h1>
       <p>Convide seus amigos para uma sala e rolem seus dados!</p>
       <div class="buttons">
-        <button class="button outlined">Ver salas</button>
+        <a href="#rooms" class="button outlined">Ver salas</a>
         <button class="button">Criar uma Sala</button>
       </div>
     </div>
@@ -13,6 +13,22 @@
       <div class="die-container">
         {{>_die}}
       </div>
+    </div>
+  </div>
+</section>
+<section id="rooms-actions">
+  <div class="content container">
+    <div class="left">
+      {{>_logo}}
+      <strong>Criar uma Sala</strong>
+      <input type="text" placeholder="Room ID">
+      <button class="button inverted">Entrar</button>
+    </div>
+    <div class="right">
+      {{>_logo}}
+      <strong>Entrar em uma Sala</strong>
+      <input type="text" placeholder="Room ID">
+      <button class="button">Entrar</button>
     </div>
   </div>
 </section>
@@ -28,3 +44,4 @@
     <li>{{>_roomItem id=7 name="Jogando Dungeons and Dragons" owner="Pedrok"}}</li>
   </ul>
 </section>
+{{>_footer}}
