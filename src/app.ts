@@ -4,6 +4,7 @@ import expressHandlebars from 'express-handlebars';
 import path from 'path';
 
 import routes from './routes';
+import roomMiddleware from './middlewares/roomMiddleware';
 
 const app = express();
 
@@ -22,6 +23,9 @@ app.engine(
   }),
 );
 app.set('view engine', 'hbs');
+
+// Middlewares
+app.use(roomMiddleware);
 
 app.use(routes);
 app.use(express.static('public'));

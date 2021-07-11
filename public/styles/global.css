@@ -76,44 +76,39 @@ div.content {
   justify-content: center;
   align-items: center;
 }
-div.content > div.left,
-div.content > div.right {
+div.content > .left,
+div.content > .right {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
-div.content div.left {
-  padding: 0px 32px 0px 0px;
-}
-div.content div.right {
-  padding: 0px 0px 0px 32px;
-}
-section#banner div.content > div.left {
+section#banner div.content > .left {
   display: flex;
   color: #fefefe;
   flex: 0.8;
   padding: 0px 32px 0px 0px;
 }
-section#banner div.content > div.left h1 {
+section#banner div.content > .left h1 {
   font-size: 48px;
 }
-section#banner div.content > div.left p {
+section#banner div.content > .left p {
   font-size: 16px;
   margin-top: 16px;
 }
-section#banner div.content > div.left .buttons {
+section#banner div.content > .left .buttons {
   margin-top: 32px;
   display: flex;
   gap: 16px;
 }
-section#banner div.content > div.right {
+section#banner div.content > .right {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0px 0px 0px 32px;
 }
 
 @media (max-width: 920px) {
-  div.content > div.right {
+  div.content > .right {
     display: none !important;
   }
 }
@@ -123,8 +118,13 @@ section#rooms-actions {
   flex-direction: row;
   height: 320px;
 }
-section#rooms-actions div.left,
-section#rooms-actions div.right {
+section#rooms-actions .content {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+section#rooms-actions .left,
+section#rooms-actions .right {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,27 +133,25 @@ section#rooms-actions div.right {
   height: 100%;
   border-radius: 16px;
 }
-section#rooms-actions div.left {
+section#rooms-actions .left {
   background-color: #fefefe;
-  margin-right: 8px;
 }
-section#rooms-actions div.left .logo-container {
+section#rooms-actions .left .logo-container {
   --color: #2e2e2e;
 }
-section#rooms-actions div.left .logo-container,
-section#rooms-actions div.right .logo-container {
+section#rooms-actions .left .logo-container,
+section#rooms-actions .right .logo-container {
   --logo-size: 48px;
 }
-section#rooms-actions div.right {
+section#rooms-actions .right {
   border: 3px dashed #fefefe;
-  margin-left: 8px;
 }
-section#rooms-actions div.left strong,
-section#rooms-actions div.left input {
+section#rooms-actions .left strong,
+section#rooms-actions .left input {
   color: #2e2e2e;
 }
-section#rooms-actions div.right strong,
-section#rooms-actions div.right input {
+section#rooms-actions .right strong,
+section#rooms-actions .right input {
   color: #fefefe;
 }
 section#rooms-actions button,
@@ -167,7 +165,7 @@ section#rooms-actions input {
   font-size: 16px;
   background-color: #333333;
 }
-section#rooms-actions div.left input {
+section#rooms-actions .left input {
   background-color: #fefefe;
   border: 2px solid #333333;
 }

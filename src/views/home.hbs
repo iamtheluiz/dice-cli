@@ -18,30 +18,30 @@
 </section>
 <section id="rooms-actions">
   <div class="content container">
-    <div class="left">
+    <form class="left" onsubmit="handleCreateRoom(event)">
       {{>_logo}}
       <strong>Criar uma Sala</strong>
-      <input type="text" placeholder="Room ID">
+      <input type="text" name="name" placeholder="Room Name">
       <button class="button inverted">Entrar</button>
-    </div>
-    <div class="right">
+    </form>
+    <form class="right" onsubmit="handleCreateRoom(event)">
       {{>_logo}}
       <strong>Entrar em uma Sala</strong>
       <input type="text" placeholder="Room ID">
       <button class="button">Entrar</button>
-    </div>
+    </form>
   </div>
 </section>
 <section id="rooms" class="container">
   <h2>Public Rooms</h2>
-  <ul>
-    <li>{{>_roomItem id=1 name="Jogando Umineko" owner="Cellbit"}}</li>
-    <li>{{>_roomItem id=2 name="Jogando Dungeons and Dragons" owner="Pedrok"}}</li>
-    <li>{{>_roomItem id=3 name="Jogando Dungeons and Dragons" owner="Pedrok"}}</li>
-    <li>{{>_roomItem id=4 name="Jogando Dungeons and Dragons" owner="Pedrok"}}</li>
-    <li>{{>_roomItem id=5 name="Jogando Dungeons and Dragons" owner="Pedrok"}}</li>
-    <li>{{>_roomItem id=6 name="Jogando Dungeons and Dragons" owner="Pedrok"}}</li>
-    <li>{{>_roomItem id=7 name="Jogando Dungeons and Dragons" owner="Pedrok"}}</li>
-  </ul>
+  {{#if rooms}}
+    <ul>
+      {{#each rooms}}
+        <li>{{>_roomItem id=this.id name=this.name owner="User"}}</li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <span>Não existe nenhuma sala pública disponível!</span>
+  {{/if}}
 </section>
 {{>_footer}}
