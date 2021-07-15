@@ -13,7 +13,7 @@ routes.get('/room/:id', RoomController.index);
 routes.post('/room', RoomController.createRoom);
 
 // API Routes
-routes.get('/api', (request, response) => {
+routes.get('/info', (request, response) => {
   const info = {
     name: 'Dice Roll API',
     repository: 'https://github.com/iamtheluiz/dice-roll',
@@ -22,6 +22,6 @@ routes.get('/api', (request, response) => {
   return response.json(info).status(200);
 });
 
-routes.post('/api/roll', RollController.roll);
+routes.post('/roll', RollController.roll);
 
 export default routes;
