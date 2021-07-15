@@ -1,0 +1,2 @@
+# Ignore handlebars due to compilation issues
+**/*.hbs

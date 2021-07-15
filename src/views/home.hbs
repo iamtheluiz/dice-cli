@@ -1,0 +1,47 @@
+<section id="banner">
+  {{>_nav}}
+  <div class="content container">
+    <div class="left">
+      <h1>Boas vindas ao <br> Dice Roll!</h1>
+      <p>Convide seus amigos para uma sala e rolem seus dados!</p>
+      <div class="buttons">
+        <a href="#rooms" class="button outlined">Ver salas</a>
+        <a href="#rooms-actions" class="button">Criar uma Sala</a>
+      </div>
+    </div>
+    <div class="right">
+      <div class="die-container">
+        {{>_die}}
+      </div>
+    </div>
+  </div>
+</section>
+<section id="rooms-actions">
+  <div class="content container">
+    <form class="left" onsubmit="handleCreateRoom(event)">
+      {{>_logo}}
+      <strong>Criar uma Sala</strong>
+      <input type="text" name="name" placeholder="Room Name">
+      <button class="button inverted">Entrar</button>
+    </form>
+    <form class="right" onsubmit="handleCreateRoom(event)">
+      {{>_logo}}
+      <strong>Entrar em uma Sala</strong>
+      <input type="text" placeholder="Room ID">
+      <button class="button">Entrar</button>
+    </form>
+  </div>
+</section>
+<section id="rooms" class="container">
+  <h2>Public Rooms</h2>
+  {{#if rooms}}
+    <ul>
+      {{#each rooms}}
+        <li>{{>_roomItem id=this.id name=this.name owner="User"}}</li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <span>Não existe nenhuma sala pública disponível!</span>
+  {{/if}}
+</section>
+{{>_footer}}

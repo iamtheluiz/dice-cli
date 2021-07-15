@@ -1,0 +1,19 @@
+<div class="room-item">
+  <div class="room-info">
+    {{>_logo}}
+    <div class="room-details">
+      <span>Room {{id}}</span>
+      <strong>{{name}}</strong>
+      <span>Owner: {{owner}} </span>
+    </div>
+  </div>
+  <div class="room-options">
+    <span class="room-users">1/6
+      <div class="user-icon">
+        <div class="user-head"></div>
+        <div class="user-body"></div>
+      </div>
+    </span>
+    <a href="/room/{{id}}" class="button inverted">join</a>
+  </div>
+</div>
