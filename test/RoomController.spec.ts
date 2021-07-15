@@ -1,3 +1,5 @@
+/// <reference types="jest" />
+
 import supertest from 'supertest';
 import { validate as uuidValidate } from 'uuid';
 import app from '../src/app';
